@@ -1,0 +1,46 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding-left: 1em; 
+    text-indent: -.7em;
+    border: 1px solid lightgray;
+}
+
+li::before {
+    content: "• ";
+}
+
+li.ok::before {
+    color: green;
+}
+li.ok > strong {
+    color: green;
+}
+
+li.error::before {
+    color: red;
+}
+li.error > strong {
+    color: red;
+}
+
+li.warning::before {
+    color: orange;
+}
+li.warning > strong {
+    color: orange;
+}
+li.info::before {
+    color: blue;
+}
+li.info > strong {
+    color: blue;
+}
+
+div.stderr {
+    color: darkred;
+}
