@@ -22,10 +22,13 @@ li_template = '''\
 </li>'''
 
 def list_executable_files(directory):
-    for filename in os.listdir(directory):
-        fullpath = os.path.join(directory, filename)
-        if os.path.isfile(fullpath) and os.access(fullpath, os.X_OK):
-            yield fullpath
+    try:
+        for filename in os.listdir(directory):
+            fullpath = os.path.join(directory, filename)
+            if os.path.isfile(fullpath) and os.access(fullpath, os.X_OK):
+                yield fullpath
+    except FileNotFoundError:
+        raise StopIteration
 
 def generate_li(script_path):
     proc = run([script_path], stdout=PIPE, stderr=PIPE, encoding='utf-8')
