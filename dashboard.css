@@ -1,46 +1,50 @@
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+body{
+    font-family: 'Verdana', sans-serif;
 }
 
-li {
-    padding-left: 1em; 
-    text-indent: -.7em;
-    border: 1px solid lightgray;
+p{
+    white-space: pre;
+    text-indent: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-li::before {
-    content: "• ";
+section{
+    margin: 1em;
+    background-color: inherit;
+    padding-left: 1em;
+    padding-bottom: 0.2em;
+    border-left: 1em solid black;
 }
 
-li.ok::before {
-    color: green;
-}
-li.ok > strong {
-    color: green;
+
+h1{
+    margin-top: 0.2em;
+    margin-bottom: 0em;
+    font-size: 1.5em;
 }
 
-li.error::before {
-    color: red;
-}
-li.error > strong {
-    color: red;
+.error{
+    border-color: rgba(187, 0, 0, 1);
+    background-color: rgba(187, 0, 0, 0.15);
 }
 
-li.warning::before {
-    color: orange;
-}
-li.warning > strong {
-    color: orange;
-}
-li.info::before {
-    color: blue;
-}
-li.info > strong {
-    color: blue;
+
+.ok{
+    border-color: rgba(0, 153, 0, 1);
+    background-color: rgba(0, 153, 0, 0.15);
 }
 
-div.stderr {
+.warning{
+    border-color: rgba(255, 165, 0, 1);
+    background-color: rgba(255, 165, 0, 0.15);
+}
+
+.info{
+    border-color: rgba(30, 144, 255, 1);
+    background-color: rgba(30, 144, 255, 0.15);
+}
+
+.stderr {
     color: darkred;
 }
