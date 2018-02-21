@@ -15,11 +15,11 @@ li_class = {
 }
 
 li_template = '''\
-<li class="{cls}">
-    <strong>{title}</strong>
-    <div>{stdout}</div>
-    <div class="stderr">{stderr}</div>
-</li>'''
+<section class="{cls}">
+    <h1>{title}</h1>
+    <p>{stdout}</p>
+    <p class="stderr">{stderr}</p>
+</section>'''
 
 def list_executable_files(directory):
     try:
